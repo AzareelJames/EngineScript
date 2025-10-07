@@ -505,7 +505,7 @@ function getExtension(extension, as=extension){
               "clrAndMsg": (msg) => {term.clr(); term.msg(msg)},
               "openGitHub": () => website.open("https://github.com/AzareelJames/"),
               "msgf": (msg) => {term.clr(); term.msg(__format__ + Str(msg)); __format__ = __format__ + Str(msg)},
-              "EGS_Version": "1.0.0",
+              "EGS_Version": "1.0.0 Fixed", // Current Version
               "randBinary": () => {
                 let binary = "";
 
@@ -651,3 +651,4 @@ export async function EGS_ExecFile(file){
   EGS_Exec(code);
 
 }
+
