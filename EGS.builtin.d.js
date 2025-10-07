@@ -81,9 +81,9 @@ const website = {
   "ask": (Prompt) => window.prompt(Prompt),
   "msg": (msg) => window.alert(msg),
   "url": window.location.href,
-  "back": window.history.back,
-  "forward": window.history.forward,
-  "reload": window.location.reload,
+  "back": () => {window.history.back()},
+  "forward": () => {window.history.forward()},
+  "reload": () => {window.location.reload()},
   "body": document.body,
   "head": document.head,
   "ok": (msg) => window.confirm(msg),
@@ -649,4 +649,5 @@ export async function EGS_ExecFile(file){
   const code = await res.text();
 
   EGS_Exec(code);
+
 }
