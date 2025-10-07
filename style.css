@@ -1,0 +1,71 @@
+body{
+    background-color: rgb(3, 7, 63);
+}
+
+.e{
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+
+#logo{
+    user-select: none;
+    cursor: pointer;
+    width: 8%;
+
+    left: 8%;
+    top: 10%;
+}
+
+#title{
+    user-select: none;
+
+    font-size: 500%;
+
+    left: 50%;
+    top: 60%;
+
+    animation: animate 1s forwards;
+}
+
+@keyframes animate{
+    0%{color: rgb(3, 7, 63);}
+    100%{color:  orange; top: 10%;}
+}
+
+#p{
+    font-size: 2em;
+    color: orange;
+
+    left: 35%;
+    top: 50%;
+}
+
+#does{
+    color: orange;
+    font-size: 3em;
+
+    left: 50%;
+    top: 100%;
+}
+
+#hr{
+    top: 200%;
+    left: 50%;
+}
+
+#download{
+    font-size: 2em;
+    background-color: orange;
+
+    left: 50%;
+    top: 130%;
+}
+
+#report{
+    font-size: 3em;
+    cursor: pointer;
+    background-color: red;
+
+    left: 50%;
+    top: 150%;
+}
