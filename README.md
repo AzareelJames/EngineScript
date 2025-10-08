@@ -24,6 +24,12 @@
     This programming lanugage is on strict mode.
 
     main() function always execute after the code.
+
+    If you wanna check for updates, use this:
+    
+    getExtension("sys");
+
+    sys.checkForUpdates(); // This will check for updates, if update was found, replace the core with the new one.
 # Preview lessons
 
 # term object
@@ -69,5 +75,6 @@
     Use createError() function to create Error.
 
     createError("myCustomError");
+
 
     term.throw(new myCustomError("This is my custom Error!")); // [ERR_MSG: myCustomError: This is my custom Error!]
