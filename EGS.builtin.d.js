@@ -519,7 +519,7 @@ function getExtension(extension, as=extension){
                 term.info("EGS System: Checking for updates...");
 
                 try{
-                  const res = await getResponse("https://cdn.jsdelivr.net/gh/AzareelJames/EngineScript@main/version.txt");
+                  const res = await getResponse("https://azareeljames.github.io/EngineScript/version.txt");
                   const version = await res.text();
                   const currentVersion = "1.0.1 Update\n";
 
