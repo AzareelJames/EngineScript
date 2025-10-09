@@ -90,7 +90,8 @@ const website = {
   "getIsOnline": () => {return navigator.onLine},
   "WebSocket": window.WebSocket,
   "userAgent": navigator.userAgent,
-  "getHidden": () => document.hidden
+  "getHidden": () => document.hidden,
+  "path": window.location.pathname
 }
 
 Object.freeze(website);
@@ -520,7 +521,7 @@ function getExtension(extension, as=extension){
                 try{
                   const res = await getResponse("https://cdn.jsdelivr.net/gh/AzareelJames/EngineScript@main/version.txt");
                   const version = await res.text();
-                  const currentVersion = "1.0.1\n";
+                  const currentVersion = "1.0.1 Update\n";
 
                   if(version === currentVersion){
                     term.info("Your EGS Version is up to date. Version: ", currentVersion);
@@ -609,6 +610,7 @@ function getExtension(extension, as=extension){
             unknownLocation();
             break;
 
+        case "JavaScript":
         default:
           term.er(`EGS Extension not found: ${extension}`);
           break;
