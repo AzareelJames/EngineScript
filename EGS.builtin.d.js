@@ -91,7 +91,14 @@ const website = {
   "WebSocket": window.WebSocket,
   "userAgent": navigator.userAgent,
   "getHidden": () => document.hidden,
-  "path": window.location.pathname
+  "path": window.location.pathname,
+  "getElement": {
+    "byId": x => document.getElementById(x),
+    "byClassName": x => document.getElementsByClassName(x),
+    "byName": x => document.getElementsByName(x),
+    "byTagName": x => document.getElementsByTagName(x),
+    "byTagNameNS": x => document.getElementsByTagNameNS(x)
+  }
 }
 
 Object.freeze(website);
@@ -521,7 +528,7 @@ function getExtension(extension, as=extension){
                 try{
                   const res = await getResponse("https://azareeljames.github.io/EngineScript/version.txt");
                   const version = await res.text();
-                  const currentVersion = "1.0.1 Update\n";
+                  const currentVersion = "1.0.2\n";
 
                   if(version === currentVersion){
                     term.info("Your EGS Version is up to date. Version: ", currentVersion);
