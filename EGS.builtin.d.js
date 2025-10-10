@@ -21,7 +21,10 @@ function findBuiltinFunctions(input) {
   .replaceAll("constructor", "")
   .replaceAll("battery", "")
   .replaceAll("EGS_ERR", "")
-  .replaceAll("EGS_CANTEXEC", "");
+  .replaceAll("EGS_CANTEXEC", "")
+  .replaceAll("onclick", "")
+  .replaceAll("onload", "")
+  .replaceAll("onclose", "");
 
   // Code by AzareelJames ^
 
