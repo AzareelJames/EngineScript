@@ -98,7 +98,9 @@ const website = {
     "byName": x => document.getElementsByName(x),
     "byTagName": x => document.getElementsByTagName(x),
     "byTagNameNS": x => document.getElementsByTagNameNS(x)
-  }
+  },
+  "createElement": x => document.createElement(x),
+  "createElementNS": x => document.createElementNS(x)
 }
 
 Object.freeze(website);
