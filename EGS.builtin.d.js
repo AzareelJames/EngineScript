@@ -24,7 +24,8 @@ function findBuiltinFunctions(input) {
   .replaceAll("EGS_CANTEXEC", "")
   .replaceAll("onclick", "")
   .replaceAll("onload", "")
-  .replaceAll("onclose", "");
+  .replaceAll("onclose", "")
+  .replaceAll("currentOS", "");
 
   // Code by AzareelJames ^
 
@@ -432,7 +433,7 @@ const kill = () => {term.war("kill() may not work in try block."); throw "[Progr
 
 for(let OS of ["Win", "Mac", "Linux", "Android", "iOS", "CrOS"]){
   if(website.userAgent.indexOf(OS) !== -1){
-    const currentOS = OS;
+    assignGlobalVar(Const.CONST, "currentOS", OS);
     break;
   }
 }
@@ -533,7 +534,7 @@ function getExtension(extension, as=extension){
                 try{
                   const res = await getResponse("https://azareeljames.github.io/EngineScript/version.txt");
                   const version = await res.text();
-                  const currentVersion = "1.0.2\n";
+                  const currentVersion = "1.0.2 Fixed\n";
 
                   if(version === currentVersion){
                     term.info("Your EGS Version is up to date. Version: ", currentVersion);
