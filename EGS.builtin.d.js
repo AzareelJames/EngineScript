@@ -188,7 +188,8 @@ const Arithmetic = {
     return result;
   },
   "opposite": x => -x,
-  "randChoice": (ary=[]) => {return ary[Arithmetic.rand(0, ary.length)]}
+  "randChoice": (ary=[]) => {return ary[Arithmetic.rand(0, ary.length)]},
+  "pow": Math.pow
 };
 
 Object.freeze(Arithmetic);
@@ -534,7 +535,7 @@ function getExtension(extension, as=extension){
                 try{
                   const res = await getResponse("https://azareeljames.github.io/EngineScript/version.txt");
                   const version = await res.text();
-                  const currentVersion = "1.0.2 Fixed\n";
+                  const currentVersion = "1.0.3\n";
 
                   if(version === currentVersion){
                     term.info("Your EGS Version is up to date. Version: ", currentVersion);
@@ -623,7 +624,32 @@ function getExtension(extension, as=extension){
             unknownLocation();
             break;
 
-        case "JavaScript":
+        case "pyFunctions":
+          // Python Functions in EngineScript!
+
+          assignGlobalVar(Const.CONST, as, {
+            "print": term.msg,
+            "True": true,
+            "False": false,
+            "None": Null,
+            "requestsGet": getResponse,
+            "str": Str,
+            "num": Num, // This "num" function is not from python.
+            "list": Ary,
+            "dict": Obj,
+            "mathPi": Arithmetic.PI,
+            "mathE": Arithmetic.E,
+            "type": x => typeof x,
+            "input": website.ask,
+            "abs": Arithmetic.abs,
+            "min": Arithmetic.min,
+            "max": Arithmetic.max,
+            "round": Arithmetic.round,
+            "pow": Arithmetic.pow,
+            "callable": x => typeof x === "function",
+            "len": len
+          });
+          break;
         default:
           term.er(`EGS Extension not found: ${extension}`);
           break;
