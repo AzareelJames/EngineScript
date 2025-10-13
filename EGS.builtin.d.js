@@ -362,6 +362,13 @@ async function numOfBytes(data){
   return len(dataBytes);
 }
 
+async function bytesOfData(data) {
+  const res = await getResponse(data);
+  const dataBytes = await res.bytes();
+
+  return dataBytes;
+}
+
 const sleep = (ms) => {
   return new Pro((resolve) => wait(resolve, ms));
 }
