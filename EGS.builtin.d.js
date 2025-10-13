@@ -355,6 +355,13 @@ const Finite = Num.MAX_VALUE;
 const FiniteSafeInteger = Num.MAX_SAFE_INTEGER;
 const Func = Function;
 
+async function numOfBytes(data){
+  const res = await getResponse(data);
+  const dataBytes = await res.bytes();
+
+  return len(dataBytes);
+}
+
 const sleep = (ms) => {
   return new Pro((resolve) => wait(resolve, ms));
 }
