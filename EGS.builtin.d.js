@@ -676,6 +676,26 @@ function repeat(count=0, callback=() => {}){
   }
 }
 
+// HTML Class
+
+class HTML{
+  constructor(){
+    this.x = document.createElement("div");
+    this.x.style.border = "3px solid gray";
+
+    website.body.appendChild(this.x);
+  }
+
+  HTML(html){
+    this.x.innerHTML = html;
+  }
+
+  borderStyle(style){
+    this.x.style.border = style;
+  }
+
+}
+
 
 function tried(callback=() => {}){
   try{
