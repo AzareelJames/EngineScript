@@ -549,7 +549,7 @@ function getExtension(extension, as=extension){
                 try{
                   const res = await getResponse("https://azareeljames.github.io/EngineScript/version.txt");
                   const version = await res.text();
-                  const currentVersion = "1.0.3\n";
+                  const currentVersion = "1.0.4\n";
 
                   if(version === currentVersion){
                     term.info("Your EGS Version is up to date. Version: ", currentVersion);
@@ -690,8 +690,20 @@ class HTML{
     this.x.innerHTML = html;
   }
 
-  borderStyle(style){
-    this.x.style.border = style;
+  style(style){
+    this.x.style = style;
+  }
+
+  id(id){
+    this.x.id = id;
+  }
+
+  className(cN){
+    this.x.className = cN;
+  }
+
+  classList(cL){
+    this.x.classList(cL);
   }
 
 }
