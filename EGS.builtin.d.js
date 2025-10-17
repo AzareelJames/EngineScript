@@ -354,6 +354,7 @@ const Zero = 0;
 const Finite = Num.MAX_VALUE;
 const FiniteSafeInteger = Num.MAX_SAFE_INTEGER;
 const Func = Function;
+const Pluger = Worker;
 
 async function numOfBytes(data){
   const res = await getResponse(data);
@@ -598,6 +599,19 @@ function getExtension(extension, as=extension){
               }
             )
           break;
+
+          case "Stockfish":
+            assignGlobalVar(Const.CONST, as, {
+              "calcFEN": fen => {
+                const FEN = fen;
+
+                fetch(`https://stockfish.online/api/s/v2.php?fen=${encodeURIComponent(FEN)}&depth=15`)
+                  .then(r => r.json())
+                  .then(data => console.log(data))
+                  .catch(err => console.error(err));
+              }
+            });
+            break;
 
           case "special":
             term.throw(SyntaxError("Not a chance! I never seen this special extension before...")) // Easter egg?
