@@ -605,10 +605,12 @@ function getExtension(extension, as=extension){
               "calcFEN": fen => {
                 const FEN = fen;
 
-                fetch(`https://stockfish.online/api/s/v2.php?fen=${encodeURIComponent(FEN)}&depth=15`)
+                const result = fetch(`https://stockfish.online/api/s/v2.php?fen=${encodeURIComponent(FEN)}&depth=15`)
                   .then(r => r.json())
-                  .then(data => console.log(data))
+                  .then(data => {return data;})
                   .catch(err => console.error(err));
+
+                return result;
               }
             });
             break;
