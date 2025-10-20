@@ -48,10 +48,7 @@
 </head>
 <body>
     <h1 class="e" id="Err"></h1>
-    <p class="e">Uh oh!<br>Looks like this page you're looking for doesn't exist...<br>
-    <button onclick="
-    window.open(window.location.href.toLowerCase().replace(`errors/${HTTPError}.html`, ''), '_self');
-">Click here</button> to go back to index page.</p>
+    <p class="e">Uh oh!<br>Looks like this page you're looking for doesn't exist...<br></p>
 
 <script>
 const HTTPError = '404';
@@ -60,4 +57,5 @@ const err = document.getElementById('Err');
 err.innerText = `${HTTPError} Error!`;
 </script>
 </body>
+
 </html>
