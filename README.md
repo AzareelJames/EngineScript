@@ -25,11 +25,7 @@
 
     main() function always execute after the code.
 
-    If you wanna check for updates, use this:
-    
-    getExtension("sys");
-
-    sys.checkForUpdates(); // This will check for updates, if update was found, replace the core with the new one.
+    EGSF Stands for "EngineScript Folder".
 # Preview lessons
 
 # term object
@@ -88,4 +84,5 @@
         const sys = await getExtension("sys"); // returns a promise (pending)
         sys.checkForUpdates(); // Check for updates
     }
+
 
