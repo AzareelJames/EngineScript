@@ -78,3 +78,13 @@
 
 
     term.throw(new myCustomError("This is my custom Error!")); // [ERR_MSG: myCustomError: This is my custom Error!]
+
+# getExtension
+    Use getExtension to import.
+
+    example:
+
+    async function main(){
+        const sys = await getExtension("sys"); // returns a promise (pending)
+        sys.checkForUpdates(); // Check for updates
+    }
