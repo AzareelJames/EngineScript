@@ -1,7 +1,3 @@
-import * as EGS from "./EGSF/EGS.builtin.d.js";
-EGS.EGS_ExecFile("EngineScript.egs");
-
-
 const does = document.getElementById("does");
 const __does__ = ["An Easy language", "Simple way", "Understandable code", "No hard ways"];
 
@@ -17,3 +13,4 @@ setInterval(() => {
 
 
 console.log
+
