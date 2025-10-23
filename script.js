@@ -1,4 +1,4 @@
-import * as EGS from "./EGS.builtin.d.js";
+import * as EGS from "./EGSF/EGS.builtin.d.js";
 EGS.EGS_ExecFile("EngineScript.egs");
 
 
@@ -14,5 +14,6 @@ setInterval(() => {
     i %= __does__.length
     does.innerText = __does__[i];
 }, 3000);
+
 
 console.log
