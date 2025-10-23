@@ -5,14 +5,14 @@
 # How to execute?
     JavaScript code:
 
-    import * as EGS from "EGS.builtin.d.js"; // Make sure you install from this website
+    import * as EGS from "EGSF/EGS.builtin.d.js"; // Make sure you install from this website
 
     EGS.EGS_Exec("term.msg('Hello World!')");
 
 # How to execute file?
     JavaScript code:
 
-    import * as EGS from "EGS.builtin.d.js"; // Make sure you install from this website
+    import * as EGS from "EGSF/EGS.builtin.d.js"; // Make sure you install from this website
 
     EGS.EGS_ExecFile("[Your File]");
 
@@ -88,3 +88,4 @@
         const sys = await getExtension("sys"); // returns a promise (pending)
         sys.checkForUpdates(); // Check for updates
     }
+
